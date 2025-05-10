@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Claim Insurance - Pearl Security Insurance</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+            color: #f5f7fa;
+            min-height: 100vh;
+        }
+        .logo {
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            z-index: 10;
+        }
+        .logo img {
+            height: 70px;
+            width: auto;
+            filter: drop-shadow(0 0 8px #0072ce88);
+        }
+        .navbar {
+            width: 100%;
+            background: rgba(0,48,87,0.85);
+            color: #fff;
+            padding: 32px 0 32px 180px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #1a3a5d;
+            position: relative;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 30px;
+            font-weight: 600;
+            font-size: 19px;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
+        .navbar a:hover {
+            color: #00eaff;
+        }
+        .claim-table-section {
+            max-width: 1100px;
+            margin: 120px auto 0 auto;
+            background: rgba(255,255,255,0.08);
+            border-radius: 24px;
+            padding: 40px 24px;
+            box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+            backdrop-filter: blur(8px);
+        }
+        .claim-table-section h2 {
+            color: #00eaff;
+            font-size: 2rem;
+            margin-bottom: 28px;
+            text-align: center;
+        }
+        table.claim-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 18px;
+        }
+        table.claim-table th, table.claim-table td {
+            padding: 18px 12px;
+            background: rgba(0,48,87,0.7);
+            border-radius: 16px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 1.08rem;
+        }
+        table.claim-table th {
+            color: #00eaff;
+            font-size: 1.15rem;
+            background: rgba(0,48,87,0.95);
+            border-bottom: 2px solid #00eaff;
+        }
+        .claim-img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #00eaff55;
+            border: 2px solid #00eaff44;
+            background: #fff;
+        }
+        .insure-btn {
+            display: inline-block;
+            background: linear-gradient(90deg,#00eaff 0%,#0072ce 100%);
+            color: #fff;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 24px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 16px 0 rgba(0,114,206,0.18), 0 2px 8px 0 #00eaff55;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+            text-decoration: none;
+            margin-top: 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .insure-btn:hover {
+            background: linear-gradient(90deg,#0072ce 0%,#00eaff 100%);
+            color: #003057;
+            transform: scale(1.06);
+        }
+        .claim-point {
+            color: #e0f7fa;
+            text-align: left;
+            font-size: 1.04rem;
+        }
+        @media (max-width: 900px) {
+            .claim-table-section {
+                margin: 90px 6px 0 6px;
+                padding: 18px 2px;
+            }
+            table.claim-table th, table.claim-table td {
+                font-size: 0.98rem;
+                padding: 10px 4px;
+            }
+        }
+        @media (max-width: 600px) {
+            .claim-table-section {
+                padding: 8px 0;
+            }
+            table.claim-table th, table.claim-table td {
+                font-size: 0.92rem;
+                padding: 6px 2px;
+            }
+            .logo {
+                top: 10px;
+                left: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <a href="index.html">
+            <img src="INSURANCE WEBLOGO.jpg" alt="Pearl Security Insurance logo">
+        </a>
+    </div>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="#">Insurance</a>
+        <a href="#">Claims</a>
+        <a href="support.html">Support</a>
+        <a href="#">Contact</a>
+    </nav>
+    <section class="claim-table-section">
+        <h2>Choose Your Insurance Coverage</h2>
+        <table class="claim-table">
+            <tr>
+                <th>Type</th>
+                <th>Image</th>
+                <th>Insure</th>
+                <th>Why Choose This?</th>
+            </tr>
+            <tr>
+                <td>🚗 Gig Economy Insurance</td>
+                <td><img class="claim-img" src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=80&q=80" alt="Gig Economy"></td>
+                <td><a href="register.html" class="insure-btn">Insure</a></td>
+                <td class="claim-point">Flexible coverage for rideshare, delivery, and freelance workers. Protects your income and assets while you work on your own terms.</td>
+            </tr>
+            <tr>
+                <td>🐾 Pet Insurance</td>
+                <td><img class="claim-img" src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=80&q=80" alt="Pet Insurance"></td>
+                <td><a href="register.html" class="insure-btn">Insure</a></td>
+                <td class="claim-point">Covers vet bills, emergencies, and wellness for your furry friends. Peace of mind for every pet parent, anywhere in the world.</td>
+            </tr>
+            <tr>
+                <td>🔗 Embedded Insurance</td>
+                <td><img class="claim-img" src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=80&q=80" alt="Embedded Insurance"></td>
+                <td><a href="register.html" class="insure-btn">Insure</a></td>
+                <td class="claim-point">Seamlessly included with your purchases—travel, electronics, and more. Instant protection, no extra steps required.</td>
+            </tr>
+            <tr>
+                <td>🧠 Mental Health Coverage</td>
+                <td><img class="claim-img" src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=80&q=80" alt="Mental Health"></td>
+                <td><a href="register.html" class="insure-btn">Insure</a></td>
+                <td class="claim-point">Access to therapy, counseling, and mental wellness resources. Because your mind deserves the same care as your body.</td>
+            </tr>
+            <tr>
+                <td>🛡️ Cyber Insurance</td>
+                <td><img class="claim-img" src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=80&q=80" alt="Cyber Insurance"></td>
+                <td><a href="register.html" class="insure-btn">Insure</a></td>
+                <td class="claim-point">Protects your business from cyberattacks, data breaches, and ransomware. Includes AI-powered threat detection and global response.</td>
+            </tr>
+            <tr>
+                <td>🤖 AI Powered Policy Insurance</td>
+                <td><img class="claim-img" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=80&q=80" alt="AI Insurance"></td>
+                <td><a href="register.html" class="insure-btn">Insure</a></td>
+                <td class="claim-point">Smart, adaptive coverage that evolves with your needs. AI analyzes risks and customizes your policy for maximum protection, anywhere.</td>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>

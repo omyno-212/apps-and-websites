@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Support - Pearl Security Insurance</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+            color: #f5f7fa;
+            min-height: 100vh;
+        }
+        .logo {
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            z-index: 10;
+        }
+        .logo img {
+            height: 70px;
+            width: auto;
+            filter: drop-shadow(0 0 8px #0072ce88);
+        }
+        .navbar {
+            width: 100%;
+            background: rgba(0,48,87,0.85);
+            color: #fff;
+            padding: 32px 0 32px 180px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #1a3a5d;
+            position: relative;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 30px;
+            font-weight: 600;
+            font-size: 19px;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
+        .navbar a:hover {
+            color: #00eaff;
+        }
+        .support-section {
+            max-width: 700px;
+            margin: 120px auto 0 auto;
+            background: rgba(255,255,255,0.08);
+            border-radius: 24px;
+            padding: 40px 36px;
+            box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.18);
+        }
+        .support-section h2 {
+            color: #00eaff;
+            font-size: 2rem;
+            margin-bottom: 18px;
+        }
+        .support-team {
+            margin-bottom: 30px;
+        }
+        .support-team ul {
+            list-style: none;
+            padding: 0;
+        }
+        .support-team li {
+            margin-bottom: 14px;
+            font-size: 1.1rem;
+            color: #e0f7fa;
+        }
+        .support-team strong {
+            color: #00eaff;
+        }
+        .contact-form {
+            margin-top: 30px;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            color: #00eaff;
+            font-weight: 600;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 18px;
+            border-radius: 8px;
+            border: 1px solid #00eaff44;
+            background: rgba(255,255,255,0.12);
+            color: #003057;
+            font-size: 1rem;
+        }
+        .contact-form textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+        .contact-form button {
+            background: linear-gradient(90deg, #00eaff 0%, #0072ce 100%);
+            color: #003057;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 24px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        .contact-form button:hover {
+            background: #003057;
+            color: #00eaff;
+        }
+        .company-info {
+            margin-top: 40px;
+            background: rgba(0,48,87,0.7);
+            border-radius: 16px;
+            padding: 24px 20px;
+            color: #e0f7fa;
+            font-size: 1.1rem;
+        }
+        .company-info strong {
+            color: #00eaff;
+        }
+        @media (max-width: 800px) {
+            .support-section {
+                margin: 90px 10px 0 10px;
+                padding: 20px 10px;
+            }
+            .navbar {
+                padding-left: 100px;
+            }
+            .logo {
+                top: 10px;
+                left: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <a href="index.html">
+            <img src="INSURANCE WEBLOGO.jpg" alt="Pearl Security Insurance logo">
+        </a>
+    </div>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="#">Insurance</a>
+        <a href="#">Claims</a>
+        <a href="support.html">Support</a>
+        <a href="#">Contact</a>
+    </nav>
+    <section class="support-section">
+        <h2>Contact Our Support Team</h2>
+        <div class="support-team">
+            <ul>
+                <li><strong>General Support:</strong> <a href="mailto:support@pearlinsurance.com">support@pearlinsurance.com</a></li>
+                <li><strong>Claims:</strong> <a href="mailto:claims@pearlinsurance.com">claims@pearlinsurance.com</a></li>
+                <li><strong>Technical Help:</strong> <a href="mailto:tech@pearlinsurance.com">tech@pearlinsurance.com</a></li>
+                <li><strong>Emergency:</strong> <a href="mailto:emergency@pearlinsurance.com">emergency@pearlinsurance.com</a></li>
+            </ul>
+        </div>
+        <form class="contact-form">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">How can we help?</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="company-info">
+            <strong>Pearl Security Insurance</strong><br>
+            Founded: <span id="create-date"></span><br>
+            1234 Future Blvd, Los Angeles, CA<br>
+            Phone: (555) 123-4567
+        </div>
+    </section>
+    <script>
+        // Set company create date (forged)
+        document.getElementById('create-date').textContent = 'March 12, 2012';
+    </script>
+</body>
+</html>

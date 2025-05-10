@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Pearl Security Insurance</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+            color: #f5f7fa;
+            min-height: 100vh;
+        }
+        .logo {
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            z-index: 10;
+        }
+        .logo img {
+            height: 70px;
+            width: auto;
+            filter: drop-shadow(0 0 8px #0072ce88);
+        }
+        .navbar {
+            width: 100%;
+            background: rgba(0,48,87,0.85);
+            color: #fff;
+            padding: 32px 0 32px 180px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #1a3a5d;
+            position: relative;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 30px;
+            font-weight: 600;
+            font-size: 19px;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
+        .navbar a:hover {
+            color: #00eaff;
+        }
+        .nav-actions {
+            margin-left: auto;
+            display: flex;
+            gap: 18px;
+        }
+        .btn {
+            padding: 10px 28px;
+            border-radius: 24px;
+            font-size: 17px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .login-btn {
+            background: transparent;
+            color: #00eaff;
+            border: 2px solid #00eaff;
+        }
+        .login-btn:hover {
+            background: #00eaff;
+            color: #003057;
+        }
+        .register-btn {
+            background: linear-gradient(90deg, #0072ce 0%, #00eaff 100%);
+            color: #fff;
+            border: 2px solid #00eaff;
+        }
+        .register-btn:hover {
+            background: #003057;
+            color: #00eaff;
+            border-color: #00eaff;
+        }
+        .hero {
+            margin-top: 120px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            padding: 60px 5vw 40px 5vw;
+        }
+        .hero-content {
+            max-width: 500px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 24px;
+            padding: 40px 36px;
+            box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.18);
+        }
+        .hero-content h1 {
+            font-size: 2.8rem;
+            color: #00eaff;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+        }
+        .hero-content p {
+            font-size: 1.25rem;
+            color: #e0f7fa;
+            margin-bottom: 28px;
+        }
+        .hero-content .get-quote-btn {
+            background: linear-gradient(90deg, #00eaff 0%, #0072ce 100%);
+            color: #003057;
+            border: none;
+            padding: 14px 38px;
+            border-radius: 24px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        .hero-content .get-quote-btn:hover {
+            background: #003057;
+            color: #00eaff;
+        }
+        .hero-img {
+            flex: 1;
+            min-width: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-img img {
+            width: 100%;
+            max-width: 420px;
+            border-radius: 24px;
+            box-shadow: 0 8px 32px 0 rgba(0,114,206,0.25);
+            border: 2px solid #00eaff44;
+        }
+        .intro-section {
+            margin: 60px auto 0 auto;
+            max-width: 900px;
+            background: rgba(0,48,87,0.7);
+            border-radius: 24px;
+            padding: 40px 36px;
+            box-shadow: 0 4px 24px 0 rgba(0,114,206,0.12);
+            backdrop-filter: blur(4px);
+        }
+        .intro-section h2 {
+            color: #00eaff;
+            font-size: 2rem;
+            margin-bottom: 18px;
+        }
+        .intro-section ul {
+            color: #e0f7fa;
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+        }
+        .intro-section .incident {
+            background: rgba(255,255,255,0.09);
+            border-left: 4px solid #00eaff;
+            padding: 18px 22px;
+            border-radius: 12px;
+            margin-top: 18px;
+            color: #fff;
+            font-style: italic;
+        }
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                margin-top: 80px;
+                gap: 30px;
+            }
+            .navbar {
+                padding-left: 100px;
+            }
+        }
+        @media (max-width: 600px) {
+            .hero-content, .intro-section {
+                padding: 20px 10px;
+            }
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+                padding: 18px 0 18px 0;
+            }
+            .logo {
+                top: 10px;
+                left: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <a href="index.html">
+            <img src="https://gdemautos.wordpress.com/wp-content/uploads/2025/05/insurance-logo-2.png" alt="Pearl Security Insurance logo">
+        </a>
+    </div>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="register.html">Insurance</a>
+        <a href="login.html">Claims</a>
+        <a href="support.html">Support</a>
+        <a href="support.html">Contact</a>
+        <div class="nav-actions">
+            <a href="login.html" class="btn login-btn">Login</a>
+            <a href="register.html" class="btn register-btn">Register</a>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>You're in Good Hands</h1>
+            <p>
+                Welcome to Pearl Security Insurance, where your future is protected by innovation and care.<br>
+                Get a quote today and experience peace of mind for you and your loved ones.
+            </p>
+            <button class="get-quote-btn" onclick="window.location.href='register.html'">Get a Quote</button>
+        </div>
+        <div class="hero-img">
+            <img id="slideshow-img" src="https://gdemautos.wordpress.com/wp-content/uploads/2025/05/insurance-weblogo.jpg" alt="Futuristic Insurance Banner">
+        </div>
+    </section>
+    <section class="intro-section">
+        <h2>Why Insurance Matters</h2>
+        <ul>
+            <li>Protects your family and assets from unexpected events.</li>
+            <li>Provides financial security in times of crisis.</li>
+            <li>Ensures peace of mind so you can focus on what matters most.</li>
+            <li>Access to expert support and fast claims processing.</li>
+        </ul>
+        <div>
+            <strong>Real-life Incident (California, 2018):</strong>
+            <div class="incident">
+                During the devastating California wildfires, thousands lost their homes and belongings. Those with comprehensive insurance were able to rebuild their lives quickly, receiving timely payouts and support for temporary housing, while uninsured families faced years of hardship. Insurance made all the difference.
+            </div>
+        </div>
+    </section>
+    <section class="trust-message" style="max-width:900px;margin:40px auto 0 auto;background:rgba(0,48,87,0.7);border-radius:24px;padding:36px 32px;box-shadow:0 4px 24px 0 rgba(0,114,206,0.12);backdrop-filter:blur(4px);">
+        <h2 style="color:#00eaff;">Why Cyber Insurance Coverage is Essential for Your Business</h2>
+        <p style="font-size:1.15rem;color:#e0f7fa;">
+            At Pearl Security Insurance, we understand the digital risks businesses face today. Our cyber insurance coverage is designed to protect your company from the unexpected, giving you confidence to grow and innovate without fear.
+        </p>
+        <ul style="color:#f5f7fa;font-size:1.08rem;">
+            <li><strong>Financial Protection:</strong> Covers losses from data breaches, ransomware, and cyberattacks, saving your business from costly disruptions.</li>
+            <li><strong>Business Continuity:</strong> Ensures you can recover quickly and keep serving your customers, even after a cyber incident.</li>
+            <li><strong>Legal Support:</strong> Provides expert legal assistance and covers regulatory fines related to data privacy laws.</li>
+            <li><strong>Reputation Management:</strong> Includes resources to help restore your brand’s reputation and customer trust after an attack.</li>
+            <li><strong>24/7 Expert Response:</strong> Access to a dedicated cyber response team, ready to assist you at any hour.</li>
+        </ul>
+        <div style="background:rgba(255,255,255,0.09);border-left:4px solid #00eaff;padding:16px 20px;border-radius:12px;margin-top:18px;color:#fff;font-style:italic;">
+            <strong>Trust Pearl Security Insurance:</strong> In today’s world, cyber threats are not a matter of if, but when. With our comprehensive cyber insurance, you can focus on growing your business—knowing we’ve got your back when it matters most.
+        </div>
+    </section>
+    <section class="cyber-cta" style="max-width:900px;margin:40px auto 0 auto;background:rgba(0,48,87,0.8);border-radius:24px;padding:36px 32px;box-shadow:0 4px 24px 0 rgba(0,114,206,0.12);backdrop-filter:blur(4px);text-align:center;">
+        <h2 style="color:#00eaff;">Claim a Cyber Coverage This Year</h2>
+        <p style="font-size:1.15rem;color:#e0f7fa;">
+            Protect your business from the ever-evolving digital threats. With AI-powered cyber insurance, you get:
+        </p>
+        <ul style="color:#f5f7fa;font-size:1.08rem;text-align:left;max-width:600px;margin:0 auto 24px auto;">
+            <li><strong>AI Threat Detection:</strong> Advanced algorithms monitor and respond to cyber risks in real time, reducing the chance of breaches worldwide.</li>
+            <li><strong>Global Coverage:</strong> No matter where your business operates, enjoy protection against cybercrime, data loss, and ransomware attacks.</li>
+            <li><strong>Incident Response:</strong> Immediate access to cyber experts and AI-driven recovery tools to minimize downtime and losses.</li>
+            <li><strong>Regulatory Compliance:</strong> Stay ahead of international data privacy laws with automated compliance support.</li>
+            <li><strong>Reputation Safeguard:</strong> AI-powered solutions help restore your brand’s trust after an incident, no matter your location.</li>
+        </ul>
+        <a href="claim.html"
+           style="
+            display:inline-block;
+            background: linear-gradient(90deg,#00eaff 0%,#0072ce 100%);
+            color: #fff;
+            border: none;
+            padding: 18px 48px;
+            border-radius: 32px;
+            font-size: 1.35rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 32px 0 rgba(0,114,206,0.25), 0 2px 8px 0 #00eaff55;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+            text-decoration: none;
+            margin-top: 18px;
+            position: relative;
+            overflow: hidden;
+        "
+           onmouseover="this.style.background='linear-gradient(90deg,#0072ce 0%,#00eaff 100%)';this.style.color='#003057';this.style.transform='scale(1.05)';"
+           onmouseout="this.style.background='linear-gradient(90deg,#00eaff 0%,#0072ce 100%)';this.style.color='#fff';this.style.transform='scale(1)';"
+        >
+            <span style="position:relative;z-index:2;">🍒 Claim Your Cyber Coverage Now 🍒</span>
+            <span style="position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle at 70% 30%,rgba(0,234,255,0.15) 0%,rgba(0,114,206,0.05) 100%);z-index:1;"></span>
+        </a>
+    </section>
+    <!-- ...other page content... -->
+    <script>
+        const images = [
+            "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+            "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80",
+            "https://gdemautos.wordpress.com/wp-content/uploads/2025/05/insurance-logo-2.png",
+            "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80"
+        ];
+        let idx = 0;
+        setInterval(() => {
+            idx = (idx + 1) % images.length;
+            document.getElementById('slideshow-img').src = images[idx];
+        }, 3500);
+    </script>
+</body>
+</html>
